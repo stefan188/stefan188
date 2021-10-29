@@ -1,0 +1,41 @@
+import tkinter,random
+p = tkinter.Canvas(width = 500, height = 500)
+p.pack()
+def strom(x,y):
+    p.create_oval(x-20,y-40,x+30,y-90,outline='green',fill='green')
+    p.create_rectangle(x,y,x+10,y-40,outline='brown', fill='brown')
+def dom(x,y):
+    p.create_rectangle(x,y,x+50,y-50,fill='yellow')
+    p.create_rectangle(x+5,y-45,x+25,y-25,fill='gray')
+    p.create_rectangle(x+29,y,x+44,y-40,fill='black')
+    p.create_polygon(x,y-50,x+50,y-50,x+25,y-75,fill='red',outline='red')
+def oblak(x,y):
+    p.create_oval(x,y,x+30,y+30,fill='white',outline='')
+    p.create_oval(x+15,y,x+45,y+30,fill='white',outline='')
+    p.create_oval(x+30,y,x+60,y+30,fill='white',outline='')
+    p.create_oval(x+45,y,x+75,y+30,fill='white',outline='')
+    p.create_oval(x+15,y-15,x+45,y+15,fill='white',outline='')
+    p.create_oval(x+30,y-15,x+60,y+15,fill='white',outline='')
+    p.create_oval(x+15,y+15,x+45,y+45,fill='white',outline='')
+    p.create_oval(x+30,y+15,x+60,y+45,fill='white',outline='')    
+p.create_rectangle(0,0,500,100,outline='',fill='#00FF90')
+p.create_rectangle(0,100,500,200,outline='',fill='#00FF90')
+x=50
+y=200
+for i in range(1,4):    
+    strom(x,y)
+    x=x+50
+x=100
+for i in range(1,4):
+    dom(x,y)
+    x=x+100
+x=350
+for i in range(1,4):    
+    strom(x,y)
+    x=x+50
+x=30
+y=30
+for i in range(1,6):
+    oblak(x,y)
+    x=x+90
+main.loop()
